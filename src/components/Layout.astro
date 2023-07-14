@@ -1,0 +1,239 @@
+---
+interface Props {
+    style: string
+    title: string
+    icon: string
+}
+
+const {style, title, icon} = Astro.props
+
+const styleLI = "mx-1 rounded-xl bg-gray-600 hover:shadow-md hover:shadow-black transition-all"
+const styleA ="flex mx-2 my-1"
+const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium text-gray-800 bg-transparent rounded-xl hover:bg-gray-800 hover:text-white focus:z-10 focus:hover:contrast-150 hover:shadow-md hover:shadow-black transition-all"
+
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="descripcion" content="Portafolio Andres Prado">
+    <link rel="icon" type="image" href="./imagenes/books-removebg-preview.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viwe-transition" content="same-origin">
+    <title>Portafolio Andres Prado</title>
+    
+    
+</head>
+<body id="content" class={`${style}`}>
+    <header class="w-screen p-11  text-white  font-bold text-center items-center pb-3 bg-gradient-to-b from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100%">
+        <div class="">
+            <h4 class="mb-4 text-gray-800">Menu</h4>
+            
+            <div class="inline-flex rounded-md shadow-md shadow-gray-450">
+
+                
+
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/' ? location.href = '/' : ""}`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/books-removebg-preview.webp" ></img>
+                    Inicio
+                </button>
+                
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/habilidades' ? location.href = '/habilidades' : "" }`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/skills.webp"></img>
+                    Habilidades
+                </button>
+
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/proyectos' ? location.href = '/proyectos' : "" }`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/proyectos.svg" ></img>
+                    Proyectos
+                </button>
+                
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/chistes' ? location.href = '/chistes' : "" }`>
+                    <img class="w-5 h-5 mr-2 " src="./imagenes/risa.svg" ></img>
+                    Chistes
+                </button>
+        </div>
+    </header>
+
+        <main>
+        <slot/>
+        </main>
+
+    <footer class=" bottom-0 w-full  p-11  text-white  font-bold text-center items-center pb-3 bg-gradient-to-t from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100%">
+            <section class="grid grid-cols-6">
+                <div class="col-span-2 mt-10">
+                    <h4 class="mb-4 text-gray-800">Redes sociales</h4>
+                    <ul class="flex justify-center">
+                        <li class={`hover:bg-[#1877F2] ${styleLI}`}><a class={styleA} href="https://www.facebook.com/andresfelipe.pradovelasco/">
+                            <img class="mr-2" src="../../public/imagenes/facebookLogo.svg" alt="logo facebook"> 
+                            Facebook</a>
+                        </li>
+                        <li class={`hover:bg-[#0A66C2] ${styleLI}`}><a class={styleA} href="https://www.linkedin.com/in/andres-felipe-prado-velasco/">
+                            <img class="mr-2" src="../../public/imagenes/linkedinLogo.svg" alt="logo linquedin"> 
+                            Linkedin</a>
+                        </li>
+                        <li class={`hover:bg-[#E84357] ${styleLI}`}><a class={styleA} href="https://www.instagram.com/andresprado_2525/">
+                            <img class="mr-2 h-4 mt-1 " src="../../public/imagenes/instagramLogo.svg" alt="logo instagram">
+                            Instagram</a>
+                        </li>
+                        <li class={`hover:bg-[#1d242f] ${styleLI}`}><a class={styleA} href="https://github.com/dakan2525?tab=repositories">
+                            <img class="mr-2" src="../../public/imagenes/githubLogo.svg" alt="logo github"> 
+                            Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h4 class="mb-4 text-gray-800">Menu</h4>
+                    
+                    <div class="inline-flex rounded-md shadow-md shadow-gray-450">
+    
+                        <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/' ? location.href = '/' : ""}`>
+                            <img class="w-7 h-7 mr-2 " src="./imagenes/books-removebg-preview.webp" ></img>
+                            Inicio
+                        </button>
+                        
+                        <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/habilidades' ? location.href = '/habilidades' : "" }`>
+                            <img class="w-7 h-7 mr-2 " src="./imagenes/skills.webp"></img>
+                            Habilidades
+                        </button>
+        
+                        <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/proyectos' ? location.href = '/proyectos' : "" }`>
+                            <img class="w-7 h-7 mr-2 " src="./imagenes/proyectos.svg" ></img>
+                            Proyectos
+                        </button>
+                        
+                        <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/chistes' ? location.href = '/chistes' : "" }`>
+                            <img class="w-5 h-5 mr-2 " src="./imagenes/risa.svg" ></img>
+                            Chistes
+                        </button>
+                </div>
+    
+                </div>
+                <div class="mt-10">
+                    <h4 class="mb-4 text-gray-800">Datos de contacto</h4>
+                </div>
+                <div class="mt-10">
+                    <h4 class="mb-4 text-gray-800">Estudie en:</h4>
+                    <a href="https://www.aluracursos.com/sobre"><img class=" h-20 w-auto mx-auto" src="../../public/imagenes/logo-aluraespanhol.svg" alt="Logo Alura"></a>
+                </div>
+            </section>
+            
+            <section class="pt-0">
+                <p class="text-white">Desarrollado por Andres Prado V <br>2023 - Copyright &#169</p>
+            </section>
+    </footer>
+</body>
+</html>
+
+<style is:global>
+    :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);    
+    }
+    html {
+        font-family: system-ui sans-serif;
+        background-color: #E5E7EB;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+
+    /* Agrega la propiedad "scrollbar-color" a la clase que define el estilo de la barra lateral de scroll */
+::-webkit-scrollbar {
+  scrollbar-color: #4a5568 #edf2f7;
+}
+
+/* Define los valores para "scrollbar-color" que deseas utilizar */
+::-webkit-scrollbar-track {
+  background-color: #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+}
+
+/* Agrega la propiedad "scrollbar-width" para definir el ancho de la barra de desplazamiento */
+::-webkit-scrollbar {
+  scrollbar-width: thin;
+}
+
+    
+@keyframes fade-in {
+    from { opacity: 0; }
+}
+
+@keyframes fade-out {
+    to { opacity: 0; }
+}
+
+@keyframes slide-from-right {
+    from { transform: translateX(100%); 
+    }
+}
+
+@keyframes slide-to-left {
+    to { transform: translateX(-100%); }
+}
+
+::view-transition-old(root) {
+    animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    1000ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+    animation-duration: 1s;
+}
+
+::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    1000ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+    animation-duration: 1s;
+}
+
+/* ::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 1s;
+} */
+
+
+</style>
+
+<!-- capturamos la animacion y hacemos lo que se indique en los @keyframes -->
+<script>
+        if (document.startViewTransition) {
+
+window.navigation.addEventListener('navigate', (event) => {
+    console.log(event.destination.url)
+    const toUrl = new URL(event.destination.url)
+
+    /// no es una pagina externa? si es true no hace nada
+    if (location.origin !== toUrl.origin) return
+
+    /// si estamos navegando en el mismo dominio (origen)
+    event.intercept({
+        async handler() {
+            
+            ///vamso a cargar la pagina de destino
+            /// con el metodo fetch optenemos el HTML 
+            const response = await fetch(toUrl.pathname) // se espera /habilidade o /chistes
+            // mejor que traer la info con json() la traemos con text() para que sea texto plano
+            const text = await response.text()
+            //vamos a separar con un regex de busqueda solo lo que este tre las etiquetas de <body></body>
+            const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)
+            
+            //utilizamos la API de viwe Transition 
+            document.startViewTransition(() => {
+
+                //como tiene que actualizar la vista al pasar de vieja ruta a nueva ruta
+                document.body.innerHTML = data
+
+                // para hacer el scroll hasta el inicio de la nueva pagina 
+                document.documentElement.scrollTop = 0
+            })
+
+        }
+    })
+})
+}
+
+</script>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

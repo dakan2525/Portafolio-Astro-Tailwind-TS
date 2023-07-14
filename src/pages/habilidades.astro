@@ -1,5 +1,6 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from "../components/Layout.astro"
+import CardHabilidades from "../components/[cardHabilidades].astro";
 
 const habilidades = [
     {   titulo:"HTML5",
@@ -41,32 +42,48 @@ const habilidades = [
 ]
 
 ---
-<Layout style="" title="Portafolio Andres Prado" icon="books-removebg-preview.webp">
-    <section class="h-auto w-auto">
-        <div class="grid grid-cols-6 bg-gray-200 h-full items-center p-24 mx-auto">
-            <a class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl rounded-full " href="/habilidades">
-                <img 
-                class="col-span-1 aspect-[460/460] h-auto w-auto object-cover rounded-full" 
-                style="view-transition-name: image;"
-                src="/public/imagenes/perfil.webp" 
-                alt="foto de perfil"
-                >
-            </a>
-            <div class="col-span-5 ml-10"
-            style="view-transition-name: titulo;">
-                <h2 class="font-bold pb-1 text-xl"
+
+<Layout style="" title="Habilidades" icon="skills.webp">
+    <section class="grid grid-cols-6 bg-gray-200">
+    
+        <div class="col-span-2 text-center p-10">
+        
+            <img 
+            class="mx-auto my-8 aspect-[460/460] h-auto w-auto object-cover rounded-full contrast-125 " 
+            style="view-transition-name: image;"
+            src="/public/imagenes/perfil.webp" 
+            alt="foto de perfil"
+            >
+
+            <div class="" style="view-transition-name: titulo;">
                 
-                >Soy Andres Prado</h2>
-                <h4 class="pb-5">Programador Junior Especializado en <strong>Front end</strong></h4>
-                <p>Soy un apasionado desarrollador front-end con una sólida base de conocimientos que me ayudan a asumir retos y ponerme nuevas metas. He trabajado en diversos proyectos personales y de código abierto, donde he aplicado con éxito las siguientes tecnologías: <strong> HTML5, CSS, React, Style Components, JavaScript, TypeScript, Tailwind, Astro</strong> y Programación Orientada a Objetos <strong>(POO).</strong> Estas experiencias me han permitido adquirir un amplio conocimiento y habilidades prácticas en el desarrollo de interfaces de usuario modernas y funcionales. Estoy siempre emocionado por aprender nuevas tecnologías y enfrentar nuevos desafíos en el campo del desarrollo front-end. Estoy dispuesto a aplicar mi experiencia y conocimientos para contribuir al éxito de tu equipo y enfrentar proyectos emocionantes.
-                </p>
+            <h2 class="font-bold pb-1 text-xl"
+                
+                >Experiencia</h2>
+            <p>
+
+                <strong>nota: hablar de exp en ti y contar sobre los 15 proyectos que tengo en github</strong> <br> <br>
+
+                Aunque aún no tengo experiencia profesional, he dedicado tiempo y esfuerzo a desarrollar proyectos personales con estas tecnologías. Estoy entusiasmado por seguir aprendiendo y creciendo como desarrollador <b>front-end</b>, y estoy abierto a nuevas oportunidades para aplicar mis habilidades y conocimientos en un entorno profesional.<br>
+    
+                <br>Si estás buscando a alguien con sólidos conocimientos en <strong> HTML5, CSS, React, Style Components, JavaScript, TypeScript, Tailwind, Astro y POO,</strong> estoy dispuesto a enfrentar nuevos desafíos y contribuir al éxito de tu equipo.
+                
+                <br>No dudes en contactarme para discutir oportunidades de colaboración o proyectos emocionantes. Estoy emocionado por el futuro y por seguir aprendiendo en el campo del desarrollo <b>front-end</b>.</p>
             </div>
         </div>
-
-        <div class="flex justify-end mb-60">
-            {
-                habilidades.map((elemento) => <img class="mx-5 w-10 h-10" style={`view-transition-name: ${elemento.titulo}`} src={elemento.urlImagen} alt={elemento.titulo} >)
-            }
+        <div class="col-span-4 mx-5 py-14 ">
+            <ul>
+                <!-- <h1 class="font-bold text-3xl my-8 mx-auto text-center">Habilidades y conocimientos</h1> -->
+                {
+                    habilidades.map((habilidad) => (
+                        <CardHabilidades
+                        titulo={habilidad.titulo}
+                        url={habilidad.urlImagen}
+                        descripcion={habilidad.descripcion}
+                        />
+                    ))
+                }
+            </ul>
         </div>
     </section>
 </Layout>
