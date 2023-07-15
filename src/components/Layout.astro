@@ -56,7 +56,7 @@ const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium t
         </div>
     </header>
 
-        <main>
+        <main id="content">
         <slot/>
         </main>
 
@@ -214,7 +214,7 @@ const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium t
 					const text = await response.text()
 					// quedarnos sólo con el contenido del html dentro de la etiqueta body
 					// usamos un regex para extraerlo
-					const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)
+					const [, data] = text.match(/<main[^>]*>([\s\S]*)<\/main>/i)
 	
 					// utilizar la api de View Transition API
 					document.startViewTransition(() => {
