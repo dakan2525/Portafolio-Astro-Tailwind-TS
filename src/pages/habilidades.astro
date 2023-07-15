@@ -1,5 +1,5 @@
 ---
-import Layout from "../components/Layout.astro"
+import Layout from "../components/[Layout].astro"
 import CardHabilidades from "../components/[cardHabilidades].astro";
 
 const habilidades = [
@@ -50,12 +50,12 @@ const habilidades = [
         
             <img 
             class="mx-auto my-8 aspect-[460/460] h-auto w-auto object-cover rounded-full contrast-125 " 
-            style="view-transition-name: image;"
+            style={"view-transition-name: image"}
             src="/public/imagenes/perfil.webp" 
             alt="foto de perfil"
             >
 
-            <div class="" style="view-transition-name: titulo;">
+            <div class="" style={"view-transition-name: titulo"}>
                 
             <h2 class="font-bold pb-1 text-xl"
                 

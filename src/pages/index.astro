@@ -1,5 +1,5 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from "../components/[Layout].astro";
 
 const habilidades = [
     {   titulo:"HTML5",
@@ -47,13 +47,13 @@ const habilidades = [
             <a class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl rounded-full " href="/habilidades">
                 <img 
                 class="col-span-1 aspect-[460/460] h-auto w-auto object-cover rounded-full" 
-                style="view-transition-name: image;"
+                style={"view-transition-name: image"}
                 src="/public/imagenes/perfil.webp" 
                 alt="foto de perfil"
                 >
             </a>
             <div class="col-span-5 ml-10"
-            style="view-transition-name: titulo;">
+            style={"view-transition-name: titulo"}>
                 <h2 class="font-bold pb-1 text-xl"
                 
                 >Soy Andres Prado</h2>
