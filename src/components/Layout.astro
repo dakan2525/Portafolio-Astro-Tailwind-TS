@@ -195,41 +195,37 @@ const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium t
 </style>
 
 
+<!-- <script src="../utils/navigation.js"> </script> -->
 <script>
-        if (document.startViewTransition) {
-
-window.navigation.addEventListener('navigate', (event) => {
-    const toUrl = new URL(event.destination.url)
-    
-    /// no es una pagina externa? si es true no hace nada
-    if (location.origin !== toUrl.origin) return
-
-    /// si estamos navegando en el mismo dominio (origen)
-    event.intercept({
-        async handler() {
-            
-            ///vamso a cargar la pagina de destino
-            /// con el metodo fetch optenemos el HTML 
-            const response = await fetch(toUrl.pathname) // se espera /habilidade o /chistes
-            // mejor que traer la info con json() la traemos con text() para que sea texto plano
-            const text = await response.text()
-            //vamos a separar con un regex de busqueda solo lo que este tre las etiquetas de <body></body>
-            const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)
-            
-            //utilizamos la API de viwe Transition 
-            document.startViewTransition(() => {
-
-                //como tiene que actualizar la vista al pasar de vieja ruta a nueva ruta
-                document.body.innerHTML = data
-
-                // para hacer el scroll hasta el inicio de la nueva pagina 
-                document.documentElement.scrollTop = 0
-            })
-
-        }
-    })
-})
-}
+	if (document.startViewTransition) {
+        
+		window.navigation.addEventListener('navigate', (event) => {
+			const toUrl = new URL(event.destination.url)
+	
+			// es una página externa? si es así, lo ignoramos
+			if (location.origin !== toUrl.origin) return
+	
+			// si es una navegación en el mismo dominio (origen)
+			event.intercept({
+				async handler () {
+					// vamos a cargar la página de destino
+					// utilizando un fetch para obtener el HTML
+					const response = await fetch(toUrl.pathname) // /clean-code
+					const text = await response.text()
+					// quedarnos sólo con el contenido del html dentro de la etiqueta body
+					// usamos un regex para extraerlo
+					const [, data] = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)
+	
+					// utilizar la api de View Transition API
+					document.startViewTransition(() => {
+						// el scroll hacia arriba del todo
+						document.body.innerHTML = data
+						document.documentElement.scrollTop = 0
+					})
+				}
+			})
+		})
+	}
 </script>
 
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
