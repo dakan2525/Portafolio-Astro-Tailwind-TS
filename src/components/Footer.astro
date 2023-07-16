@@ -1,0 +1,74 @@
+---
+
+const styleLI = "mx-1 rounded-xl bg-gray-600 hover:shadow-md hover:shadow-black transition-all";
+
+const styleA ="flex mx-2 my-1";
+
+const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium text-gray-800 bg-transparent rounded-xl hover:bg-gray-800 hover:text-white focus:z-10 focus:hover:contrast-150 hover:shadow-md hover:shadow-black transition-all";
+
+
+---
+
+<footer class=" bottom-0 w-full  p-11  text-white  font-bold text-center items-center pb-3 bg-gradient-to-t from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100%">
+    <section class="grid grid-cols-6">
+        <div class="col-span-2 mt-10">
+            <h4 class="mb-4 text-gray-800">Redes sociales</h4>
+            <ul class="flex justify-center">
+                <li class={`hover:bg-[#1877F2] ${styleLI}`}><a class={styleA} href="https://www.facebook.com/andresfelipe.pradovelasco/">
+                    <img class="mr-2" src="./imagenes/facebookLogo.svg" alt="logo facebook"> 
+                    Facebook</a>
+                </li>
+                <li class={`hover:bg-[#0A66C2] ${styleLI}`}><a class={styleA} href="https://www.linkedin.com/in/andres-felipe-prado-velasco/">
+                    <img class="mr-2" src="./imagenes/linkedinLogo.svg" alt="logo linkedin"> 
+                    Linkedin</a>
+                </li>
+                <li class={`hover:bg-[#E84357] ${styleLI}`}><a class={styleA} href="https://www.instagram.com/andresprado_2525/">
+                    <img class="mr-2 h-4 mt-1 " src="./imagenes/instagramLogo.svg" alt="logo instagram">
+                    Instagram</a>
+                </li>
+                <li class={`hover:bg-[#1d242f] ${styleLI}`}><a class={styleA} href="https://github.com/dakan2525?tab=repositories">
+                    <img class="mr-2" src="./imagenes/githubLogo.svg" alt="logo github"> 
+                    Github</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-span-2">
+            <h4 class="mb-4 text-gray-800">Menu</h4>
+            
+            <div class="inline-flex rounded-md shadow-md shadow-gray-450">
+
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/' ? location.href = '/' : ''}`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/books-removebg-preview.webp" alt="logo inicio">
+                    Inicio
+                </button>
+                
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/habilidades' ? location.href = '/habilidades' : '' }`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/skills.webp" alt="logo habilidades">
+                    Habilidades
+                </button>
+
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/proyectos' ? location.href = '/proyectos' : '' }`>
+                    <img class="w-7 h-7 mr-2 " src="./imagenes/proyectos.svg" alt="logo proyectos">
+                    Proyectos
+                </button>
+                
+                <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/chistes' ? location.href = '/chistes' : '' }`>
+                    <img class="w-5 h-5 mr-2 " src="./imagenes/risa.svg" alt="logo chistes">
+                    Chistes
+                </button>
+        </div>
+
+        </div>
+        <div class="mt-10">
+            <h4 class="mb-4 text-gray-800">Datos de contacto</h4>
+        </div>
+        <div class="mt-10">
+            <h4 class="mb-4 text-gray-800">Estudie en:</h4>
+            <a href="https://www.aluracursos.com/sobre"><img class=" h-20 w-auto mx-auto" src="./imagenes/logo-aluraespanhol.svg" alt="Logo Alura"></a>
+        </div>
+    </section>
+    
+    <section class="pt-0">
+        <p class="text-white">Desarrollado por Andres Prado V <br>2023 - Copyright &#169</p>
+    </section>
+</footer>

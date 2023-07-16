@@ -1,0 +1,32 @@
+---
+const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium text-gray-800 bg-transparent rounded-xl hover:bg-gray-800 hover:text-white focus:z-10 focus:hover:contrast-150 hover:shadow-md hover:shadow-black transition-all"
+
+---
+
+<header class="w-screen p-11  text-white  font-bold text-center items-center pb-3 bg-gradient-to-b from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100%">
+    <div class="">
+        <h4 class="mb-4 text-gray-800">Menu</h4>
+        
+        <div class="inline-flex rounded-md shadow-md shadow-gray-450">
+            
+            <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/' ? location.href = '/' : ''}`>
+                <img class="w-7 h-7 mr-2 " src="./imagenes/books-removebg-preview.webp" alt="logo inicio">
+                Inicio
+            </button>
+            
+            <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/habilidades' ? location.href = '/habilidades' :    '' }`>
+                <img class="w-7 h-7 mr-2 " src="./imagenes/skills.webp" alt="logo habilidades">
+                Habilidades
+            </button>
+
+            <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/proyectos' ? location.href = '/proyectos' : '' }`>
+                <img class="w-7 h-7 mr-2 " src="./imagenes/proyectos.svg" alt="logo proyectos">
+                Proyectos
+            </button>
+            
+            <button type="button" class={btnFooter} onclick=`{window.location.pathname !== '/chistes' ? location.href = '/chistes' : '' }`>
+                <img class="w-5 h-5 mr-2 " src="./imagenes/risa.svg" alt="logo chistes">
+                Chistes
+            </button>
+    </div>
+</header>
