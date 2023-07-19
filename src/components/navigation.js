@@ -1,4 +1,9 @@
 // navigation.js
+const prueba = (texto) => {
+    const [,datos] = texto.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+    return datos
+}
+
 
 if (document.startViewTransition) {
     window.navigation.addEventListener('navigate', (event) => {
@@ -16,7 +21,7 @@ if (document.startViewTransition) {
                 const text = await response.text();
                 // quedarnos sólo con el contenido del html dentro de la etiqueta body
                 // usamos un regex para extraerlo
-                const data = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+                const data = prueba(text)
 
                 // utilizar la api de View Transition API
                 document.startViewTransition(() => {
