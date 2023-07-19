@@ -1,10 +1,111 @@
 ---
 import Layout from "../components/Layout.astro";
+import CardExperiencia from "../components/CardExperiencia.astro";
+import CardProyectos from "../components/CardProyectos.astro";
 ---
 
 <Layout style="">
-    <section>
-        
-    </section>
+    <section class="grid grid-cols-8 mx-28 pt-24 pb-64">
 
+        <div class="col-span-2 sticky top-0 flex max-h-screen flex-col"> 
+            <h1 class="text-5xl font-bold tracking-tight">Andres Prado</h1>
+            <p class="my-4 font-semibold text-xl">Estos son mis proyectos desplegados, para ver los demas visita
+                <a class="font-bold  hover:text-blue-600" href="https://github.com/dakan2525?tab=repositories">Dakan2525</a>
+            </p>
+
+            <ul class="w-full transition-all text-xl">
+                <li class="flex justify-start ml-2 my-2">
+                    <a class="group flex mx-3 justify-start" href="#">
+                        <span class=" w-[10px] rounded-full mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white  group-hover:w-[40px]  duration-300 ">
+                        </span>
+                        <span class="col-span-1 h-7 self-start my-auto group-hover:text-white group-hover:font-bold ">
+                            Estudios
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-start ml-2  ">
+                    <a class="group flex mx-3 justify-start" href="#">
+                        <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white  group-hover:w-[40px]  duration-300 ">
+                        </span>
+                        <span class=" col-span-1 h-7 self-start my-auto  group-hover:text-white group-hover:font-bold ">
+                            Estudios
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-start ml-2 my-2">
+                    <a class="group flex mx-3 justify-start" href="#">
+                        <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white group-hover:w-[40px]  duration-300 ">
+                        </span>
+                        <span class=" col-span-1 h-7 self-start my-auto  group-hover:text-white group-hover:font-bold ">
+                            Estudios
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-span-6 grid place-items-center mx-32">
+
+            <div class="my-8">
+                <p class="">
+                    Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
+                </p>
+    
+                <p>My main focus these days is building products and leading projects for our clients at Upstatement. In my free time I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.
+                </p>
+                
+                <p>When I’m not at the computer, I’m usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seed
+                </p>
+            </div>
+
+            <div class="my-8">
+                <ul class="group/list">
+                    <CardExperiencia
+                    fecha="ENR — MAR 1996"
+                    titulo="Carvajal T&S"
+                    urlPrincipal="https://carvajaldigital.co/" 
+                    logo="./imagenes/logo-carvajal-tecnologia.png"
+                    descripcion="Developed and styled interactive web apps for Apple Music, including the UI of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback" 
+                    nombreOpcional1="Focumentos financieros" 
+                    urlOpcional1="https://carvajaldigital.co/documentos-financieros/"  
+                    nombreOpcional2="Centro Electrónico de Negocios" 
+                    urlOpcional2="https://carvajaldigital.co/cen/"   
+                    etiquetas="Ember,Ember,Ember,MusicKit.js"
+                    />
+                    <CardExperiencia
+                    fecha="ENR — MAR 1996"
+                    titulo="Carvajal T&S"
+                    urlPrincipal="https://carvajaldigital.co/" 
+                    logo="./imagenes/logo-carvajal-tecnologia.png"
+                    descripcion="Developed and styled interactive web apps for Apple Music, including the UI of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback" 
+                    nombreOpcional1="Focumentos financieros" 
+                    urlOpcional1="https://carvajaldigital.co/documentos-financieros/"  
+                    nombreOpcional2="Centro Electrónico de Negocios" 
+                    urlOpcional2="https://carvajaldigital.co/cen/"   
+                    etiquetas="Ember,Ember,Ember,MusicKit.js" 
+                    />
+                </ul>
+            </div>
+
+            <div class="my-8">
+                <ul class="group/list">
+
+                    <CardProyectos
+                    titulo="Tienda Online"
+                    urlPrincipal="https://tienda-online-react-tailwind-js.vercel.app/" 
+                    imgPreview="./imagenes/tienda_online.webp" 
+                    descripcion="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more" 
+                    etiquetas="React,Tailwind,JS"
+                    />
+                    <CardProyectos
+                    titulo="Formulario CRUD"
+                    urlPrincipal="https://org-formulario-jsx.vercel.app/" 
+                    imgPreview="./imagenes/CRUD_equipos.webp" 
+                    descripcion="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more" 
+                    etiquetas="React,CSS,JS"
+                    />
+            </div>
+
+        </div>
+    </section>
 </Layout>
