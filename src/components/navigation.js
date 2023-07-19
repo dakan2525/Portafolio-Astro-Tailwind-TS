@@ -14,7 +14,10 @@ if (document.startViewTransition) {
                 const text = await response.text();
                 // quedarnos sólo con el contenido del html dentro de la etiqueta body
                 // usamos un regex para extraerlo
-                const data = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+                // const data = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+
+                const bodyMatch = text.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+                const data = bodyMatch ? bodyMatch[1] : '';
 
                 // utilizar la api de View Transition API
                 document.startViewTransition(() => {
