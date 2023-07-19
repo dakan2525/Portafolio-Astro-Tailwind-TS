@@ -4,30 +4,30 @@ const styleLI = "mx-1 rounded-xl bg-gray-600  hover:shadow-md hover:shadow-black
 
 const styleA ="flex mx-2 my-1";
 
-const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium bg-transparent rounded-xl hover:bg-gray-800 hover:text-white focus:z-10 focus:hover:contrast-150 hover:shadow-md hover:shadow-black transition-all dark:hover:bg-slate-600";
+const btnFooter = "inline-flex items-center mx-1 px-4 my-1  font-medium bg-transparent rounded-xl hover:bg-gray-800 hover:text-white focus:z-10 focus:hover:contrast-150 hover:shadow-md hover:shadow-black transition-all dark:hover:bg-slate-600";
 
 
 ---
 
-<footer class=" bottom-0 w-full  p-11   font-bold text-center items-center pb-3 bg-gradient-to-t from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100% bark:from-gray-200  dark:from-gray-600 dark:via-slate-800  dark:to-[#19202b]">
+<footer class=" text-gray-800 dark:text-white bottom-0 w-full  p-11   font-bold text-center items-center pb-3 bg-gradient-to-t from-gray-800 from-0% via-gray-400 via-50% to-gray-200 to-100% bark:from-gray-200  dark:from-gray-600 dark:via-slate-800  dark:to-[#19202b]">
     <section class="grid grid-cols-6">
         <div class="col-span-2 mt-10">
             <h4 class="mb-4 ">Redes sociales</h4>
             <ul class="flex text-gray-200 justify-center">
                 <li class={`hover:bg-[#1877F2]  ${styleLI}`}><a class={styleA} href="https://www.facebook.com/andresfelipe.pradovelasco/">
-                    <img class="mr-2" src="./imagenes/facebookLogo.svg" alt="logo facebook"> 
+                    <img class="mr-1 h-6 my-auto" src="./imagenes/facebookLogo.svg" alt="logo facebook"> 
                     Facebook</a>
                 </li>
                 <li class={`hover:bg-[#0A66C2]  ${styleLI}`}><a class={styleA} href="https://www.linkedin.com/in/andres-felipe-prado-velasco/">
-                    <img class="mr-2" src="./imagenes/linkedinLogo.svg" alt="logo linkedin"> 
+                    <img class="mr-1 h-6 my-auto" src="./imagenes/linkedinLogo.svg" alt="logo linkedin"> 
                     Linkedin</a>
                 </li>
                 <li class={`hover:bg-[#E84357]  ${styleLI}`}><a class={styleA} href="https://www.instagram.com/andresprado_2525/">
-                    <img class="mr-2 h-4 mt-1 " src="./imagenes/instagramLogo.svg" alt="logo instagram">
+                    <img class="mr-1 h-5 my-auto " src="./imagenes/instagramLogo.svg" alt="logo instagram">
                     Instagram</a>
                 </li>
                 <li class={`hover:bg-[#1d242f]  ${styleLI}`}><a class={styleA} href="https://github.com/dakan2525?tab=repositories">
-                    <img class="mr-2" src="./imagenes/githubLogo.svg" alt="logo github"> 
+                    <img class="mr-1 h-6 my-auto" src="./imagenes/githubLogo.svg" alt="logo github"> 
                     Github</a>
                 </li>
             </ul>
@@ -61,9 +61,15 @@ const btnFooter = "inline-flex items-center mx-1 px-4 my-1 text-sm font-medium b
         </div>
         <div class="mt-10">
             <h4 class="mb-4 ">Datos de contacto</h4>
+            <div class="text-white">
+                <p>andres25prado@gmail.com</p>
+                <p>304 68 40 241</p>
+                <p>Cali - Colombia</p>
+
+            </div>                    
         </div>
         <div class="mt-10">
-            <h4 class="mb-4 text-gray-800">Estudie en:</h4>
+            <h4 class="mb-4">Estudie en:</h4>
             <a href="https://www.aluracursos.com/sobre"><img class=" h-20 w-auto mx-auto" src="./imagenes/logo-aluraespanhol.svg" alt="Logo Alura"></a>
         </div>
     </section>

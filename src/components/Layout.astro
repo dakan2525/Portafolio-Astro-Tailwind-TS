@@ -10,7 +10,7 @@ const {style} = Astro.props
 
 <!DOCTYPE html>
 <html lang="es">
-<head class="hidden">
+<head>
     <meta charset="UTF-8">
     <meta name="descripcion" content="Portafolio Andres Prado">
     <link rel="icon" type="image" href="./imagenes/books-removebg-preview.webp">
@@ -19,7 +19,7 @@ const {style} = Astro.props
     <title>Portafolio Andres Prado</title> 
 </head>
 
-    <body id="content" class={`bg-gray-200 dark:bg-[#19202b] text-[#252323] dark:text-gray-200  ${style}`}>
+    <body id="content" class={`bg-gray-200 dark:bg-[#19202b] text-[#252323] dark:text-gray-200 text-lg font-normal ${style}`}>
     
         
         <main>
@@ -35,3 +35,10 @@ const {style} = Astro.props
 
 
 </html>
+
+<style is:global>
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+    animation-duration: 800ms;}
+</style>
+

@@ -41,8 +41,8 @@ const habilidades = [
 ]
 ---
 <Layout style="">
-    <section class="h-auto w-auto">
-        <div class="grid grid-cols-6  h-full items-center p-24 mx-auto">
+    <section class="h-auto w-screen text-xl ">
+        <div class="grid grid-cols-6 items-center p-28 mx-auto">
             <a class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl rounded-full " href="/habilidades">
                 <img 
                 class="col-span-1 aspect-[460/460] h-auto w-auto object-cover rounded-full" 
@@ -53,16 +53,15 @@ const habilidades = [
             </a>
             <div class="col-span-5 ml-10"
             style={"view-transition-name: titulo"}>
-                <h2 class="font-bold pb-1 text-xl"
-                
-                >Soy Andres Prado</h2>
-                <h4 class="pb-5">Programador Junior Especializado en <strong>Front end</strong></h4>
+                <h2 class="font-bold pb-10 text-3xl">Soy Andres Prado</h2>
+
+                <h4 class="pb-5  ">Programador Junior Especializado en <strong>Front end</strong></h4>
                 <p>Soy un apasionado desarrollador front-end con una sólida base de conocimientos que me ayudan a asumir retos y ponerme nuevas metas. He trabajado en diversos proyectos personales y de código abierto, donde he aplicado con éxito las siguientes tecnologías: <strong> HTML5, CSS, React, Style Components, JavaScript, TypeScript, Tailwind, Astro</strong> y Programación Orientada a Objetos <strong>(POO).</strong> Estas experiencias me han permitido adquirir un amplio conocimiento y habilidades prácticas en el desarrollo de interfaces de usuario modernas y funcionales. Estoy siempre emocionado por aprender nuevas tecnologías y enfrentar nuevos desafíos en el campo del desarrollo front-end. Estoy dispuesto a aplicar mi experiencia y conocimientos para contribuir al éxito de tu equipo y enfrentar proyectos emocionantes.
                 </p>
             </div>
         </div>
 
-        <div class="flex justify-end mb-60">
+        <div class="flex justify-end mb-64">
             {
                 habilidades.map((elemento) => <img class="mx-5 w-10 h-10" style={`view-transition-name: ${elemento.titulo}`} src={elemento.urlImagen} alt={elemento.titulo} >)
             }
