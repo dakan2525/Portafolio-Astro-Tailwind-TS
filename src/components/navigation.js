@@ -16,7 +16,7 @@ if (document.startViewTransition) {
                 // usamos un regex para extraerlo
                 // const data = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
 
-                const bodyMatch = text.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+                const bodyMatch = text.match(/<main[^>]*>([\s\S]*)<\/main>/i);
                 const data = bodyMatch ? bodyMatch[1] : '';
 
                 // utilizar la api de View Transition API

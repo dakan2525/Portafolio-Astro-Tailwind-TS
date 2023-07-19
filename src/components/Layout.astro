@@ -20,12 +20,14 @@ const {style} = Astro.props
 </head>
 
     <body id="content" class={`bg-gray-200 dark:bg-[#19202b] text-[#252323] dark:text-gray-200  ${style}`}>
-
-    <main>
-        <Header/>
+    
+        
+        <main>
+            <Header/>
                 <slot/>
-        <Footer/>
-    </main>
+            <Footer/>    
+        </main>
+        
 
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     <script src="./navigation.js"></script>
