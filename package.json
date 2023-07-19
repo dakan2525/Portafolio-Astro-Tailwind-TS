@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^6.6.1",
-    "@astrojs/vercel": "^3.7.2",
+    "@astrojs/vercel": "^3.7.3",
     "@sveltejs/adapter-vercel": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "5.36.2",
