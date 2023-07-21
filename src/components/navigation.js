@@ -25,7 +25,7 @@ if (document.startViewTransition) {
                     document.startViewTransition(() => {
                         // el scroll hacia arriba del todo
                         document.body.innerHTML = mainContent;
-                        document.documentElement.scrollTop = 1;
+                        // document.documentElement.scrollTop = 1;
                     });
                 } catch (error) {
                     console.error('Error al cargar la página:', error);

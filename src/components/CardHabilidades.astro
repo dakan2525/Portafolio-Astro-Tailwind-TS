@@ -11,7 +11,7 @@ const { titulo, url, descripcion} = Astro.props
 <li class="flex justify-start pb-6 items-center"
 style={`view-transition-name: ${titulo}`}
 >
-    <img class="w-10 h-10" src={url} alt={titulo}>
+    <img class="w-10 h-10 md:w-16 md:h-16" src={url} alt={titulo}>
     <div class="ml-4">
         <h3 class="mb-1 font-bold">{titulo}</h3>
     <p class="">{descripcion}</p>

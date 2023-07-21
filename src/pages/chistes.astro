@@ -56,24 +56,24 @@ const usersChistes = await users.map((usuario, i) => ({
     chiste: arrayChistes[i].urlChiste
 }));
 
-
+const bgCardChiste = "bg-gradient-to-t from-transparent from-slate-60% via-gray-300 via-80% to-[#afacba] to-100% border-gray-500 border-b-[3px] border-r-[3px] shadow-slate-800 dark:from-[#19202b]  dark:via-gray-700 dark:to-gray-700"
 ---
 
 <Layout style="bg-gray-200">
-    <section class="w-full">
-        <div class="mx-24 bg-gradient-to-t from-transparent from-slate-60% via-gray-300 via-80% to-[#afacba] to-100% border-gray-500 border-b-[3px] border-r-[3px] shadow-slate-800 shadow-xl my-10 rounded-3xl mt-10  pb-10  dark:from-[#19202b]  dark:via-gray-700 dark:to-gray-700">
-            <h1 class="font-bold w-full text-center h-20 text-3xl p-4 ">Dejame contarte un chiste o mejor 10</h1>
-            <p class=" text-start w-auto h-44 pl-20 font-semibold">Primero que todo muchas gracias por ver mi trabajo,para poder contarte estos chistes fue necesario tener las siguentes habilidades que voy a resumir a continuación<br>
+    <section class="mx-4">
+        <div class={`${bgCardChiste}  md:pb-4  shadow-md lg:mx-3 lg:shadow-lg  lg:my-10 rounded-3xl  mb-20 lg:pb-20 `}>
+            <h1 class="font-bold w-full text-center h-20 text-xl lg:text-3xl p-4 " style={"view-transition-name: proyectoChiste"}>Dejame contarte un chiste, <br>o mejor 10</h1>
+            <p class="p-4 text-start w-auto lg:h-44 lg:pl-20 font-semibold">Primero que todo muchas gracias por ver mi trabajo,para poder contarte estos chistes fue necesario tener las siguentes habilidades que voy a resumir a continuación<br>
                 <br>- Conocimientos en POO y manejo de componentes
                 <br>- Uso del método fetch() para consumir una API "https://jsonplaceholder.typicode.com/users"
                 <br>- Conocimientos en JavaScript, TypeScript, Tailwind, Node.js y Astro
-                <br>- Creación de arrays uniendo dos arreglos, haciendo uso del método map() 
+                <br>- Creación de arrays uniendo dos arreglos, haciendo uso del método map()
                 <br>- Manejo de props y buenas prácticas, para evitar la duplicidad de código 
         </p>
     
         </div>
 
-        <div class="mx-3 bg-cover grid grid-cols-4 mb-20 px-20 items-center gap-8 text-center w-full p-16 rounded-3xl" style={ "background-image: url('./imagenes/map-colombia.webp'); background-position: center center; background-repeat: no-repeat; width: auto; background-size: contain;"}>
+        <div class="md:mx-3 grid md:grid-cols-2 lg:grid-cols-4 mb-20  items-center gap-8 text-center lg:py-16 rounded-3xl @apply lg:bg-[url('./imagenes/map-colombia.webp')] bg-[center_center] bg-no-repeat w-auto bg-contain">
 
         {
             usersChistes.map((usuario) => (

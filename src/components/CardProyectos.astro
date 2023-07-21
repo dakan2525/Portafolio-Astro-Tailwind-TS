@@ -14,30 +14,30 @@ const {titulo, urlPrincipal, imgPreview, descripcion, etiquetas} =Astro.props
 const arrayEtiquetas = etiquetas.split(",");
 ---
 
-<li class="mb-12">
-    <div class="group relative grid pb-1 transition-all grid-cols-8 gap-8">
-        <div class="absolute -inset-x-6 -inset-y-4 z-0  rounded-md transition motion-reduce:transition-none block group-hover:bg-gray-100 dark:group-hover:bg-[#12161e] group-hover:shadow-xl">
+<li class="mb-20 lg:mb-12">
+    <div class=" group lg:relative grid grid-cols-1 pb-1 transition-all lg:grid-cols-8 lg:gap-8">
+        <div class="lg:absolute lg:-inset-x-6 lg:-inset-y-4 z-0  rounded-md transition motion-reduce:transition-none block group-hover:bg-gray-100 dark:group-hover:bg-[#12161e] group-hover:shadow-xl">
         </div>
         <div class="z-10 order-2 col-span-5">
-            <h3>
-                <a class="text-xl group/link inline-flex items-baseline font-medium leading-tight dark:text-white dark:hover:text-[#3b9545] hover:text-[#3b9545]" href={urlPrincipal}>{titulo}
+            <h3 class="mt-5">
+                <a class="text-xl md:text-2xl group/link inline-flex items-baseline font-medium leading-tight dark:text-white dark:hover:text-[#3b9545] hover:text-[#3b9545]" href={urlPrincipal}>{titulo}
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd">
                         </path>
                     </svg>
                 </a>
                 </h3>
-                <p class="mt-2 leading-normal">{descripcion}
+                <p class="mt-2 text-base md:text-xl leading-normal">{descripcion}
                 </p>
                 
-                <ul class="mt-2 flex flex-wrap text-white">
+                <ul class="mt-2 flex justify-center flex-wrap text-white">
                     {
                         arrayEtiquetas.map((etiqueta) => <LIproyectosEtiquetas etiqueta={etiqueta}/> )
                     }
                 </ul>
             </div>
-            <a  class="col-span-3 h-full z-10" href={urlPrincipal}>
-                <img class="h-full rounded-lg" src={imgPreview} alt=`img del ${titulo}`>
+            <a  class="col-span-3 h-full z-10 md:mx-14 lg:mx-0 lg:h-4/5 lg:my-auto " href={urlPrincipal}>
+                <img class="h-full rounded-lg  " src={imgPreview} alt=`img del ${titulo}`>
             </a>
         </div>
     </li>

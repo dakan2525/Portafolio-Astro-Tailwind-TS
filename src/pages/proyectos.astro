@@ -4,43 +4,44 @@ import CardExperiencia from "../components/CardExperiencia.astro";
 import CardProyectos from "../components/CardProyectos.astro";
 ---
 
-<Layout style="">
-    <section class="grid grid-cols-8 mx-28 pt-20 pb-20">
 
-        <div class="col-span-3 sticky top-0 flex max-h-screen flex-col"  style={"view-transition-name: titulo"}> 
+<Layout style="">
+    <section class="text-xl text-center lg:text-start mx-5 md:mx-10 lg:grid lg:grid-cols-8 lg:mx-28 lg:pt-20 pb-20">          
+
+        <div class="lg:col-span-3 lg:sticky top-0 lg:flex lg:max-h-screen flex-col"  style={"view-transition-name: titulo"}> 
             
-            <div class="col-span-2 sticky top-0 flex max-h-screen flex-col justify-between py-10">
+            <div class="lg:col-span-2 lg:sticky top-0 flex max-h-screen flex-col justify-between py-10">
                 <div>
-                    <h1 class="text-5xl font-bold tracking-tight">Andres Prado</h1>
+                    <h1 class="text-3xl lg:text-5xl font-bold tracking-tight" style={"view-transition-name: proyectoChiste"}>Andres Prado</h1>
                 <p class="my-4 font-semibold">Estos son mis proyectos desplegados, para ver los demas visita
                     <a class="font-bold  hover:text-blue-600" href="https://github.com/dakan2525?tab=repositories">Dakan2525</a>
                 </p>
     
                 <ul class="w-full transition-all mt-10 text-xl font-semibold">
                     <li class="flex justify-start ml-2 my-2">
-                        <a class="group flex mx-3 justify-start" href="#">
-                            <span class=" w-[10px] rounded-full mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white  group-hover:w-[40px]  duration-300 ">
+                        <a class="group flex mx-3 justify-start" href="#estudios">
+                            <span class=" w-[10px] rounded-full mr-2 h-1 my-auto bg-gray-400  group-hover:w-[40px]  duration-300 ">
                             </span>
-                            <span class="col-span-1 h-7 self-start my-auto group-hover:text-white ">
+                            <span class="col-span-1 h-7 self-start my-auto  ">
                                 Estudios
                             </span>
                         </a>
                     </li>
                     <li class="flex justify-start ml-2  ">
-                        <a class="group flex mx-3 justify-start" href="#">
-                            <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white  group-hover:w-[40px]  duration-300 ">
+                        <a class="group flex mx-3 justify-start" href="#laboral">
+                            <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400   group-hover:w-[40px]  duration-300 ">
                             </span>
-                            <span class=" col-span-1 h-7 self-start my-auto  group-hover:text-white ">
-                                Estudios
+                            <span class=" col-span-1 h-7 self-start my-auto ">
+                                Experiencia Laborar
                             </span>
                         </a>
                     </li>
                     <li class="flex justify-start ml-2 my-2">
-                        <a class="group flex mx-3 justify-start" href="#">
-                            <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400 group-hover:bg-white group-hover:w-[40px]  duration-300 ">
+                        <a class="group flex mx-3 justify-start" href="#proyectos">
+                            <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400   group-hover:w-[40px]  duration-300 ">
                             </span>
-                            <span class=" col-span-1 h-7 self-start my-auto  group-hover:text-white ">
-                                Estudios
+                            <span class=" col-span-1 h-7 self-start my-auto ">
+                                Proyectos
                             </span>
                         </a>
                     </li>
@@ -49,9 +50,9 @@ import CardProyectos from "../components/CardProyectos.astro";
             </div>
         </div>
 
-        <div class="col-span-5 grid place-items-center mx-20 mt-10" style={"view-transition-name: contenido"}>
+        <div class="lg:col-span-5 grid place-items-center lg:mx-20 lg:mt-10 cursor-all-scroll" style={"view-transition-name: contenido"}>
 
-            <div class="mb-32 font-semibold">
+            <div id="estudios" class="text-base mb-16 scroll-mt-16 md:my-24 md:text-xl lg:mb-36 lg:scroll-mt-24" aria-label="Selected estudios">
                 <p>
                     Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
                 </p>
@@ -72,7 +73,7 @@ import CardProyectos from "../components/CardProyectos.astro";
                 </p>
             </div>
 
-            <div class="mb-32">
+            <div id="laboral" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected laboral">
                 <ul class="group/list">
                     <CardExperiencia
                     fecha="ENR — MAR 1996"
@@ -113,7 +114,7 @@ import CardProyectos from "../components/CardProyectos.astro";
                 </ul>
             </div>
 
-            <div class="mb-32">
+            <div id="proyectos" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
                 <ul class="group/list">
 
                     <CardProyectos
@@ -149,3 +150,4 @@ import CardProyectos from "../components/CardProyectos.astro";
         </div>
     </section>
 </Layout>
+

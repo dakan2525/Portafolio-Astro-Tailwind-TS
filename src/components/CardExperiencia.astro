@@ -23,19 +23,19 @@ const arrayEtiquetas = etiquetas.split(",");
 ---
 
 
-        <li class="mb-12">
-            <div class="group relative grid pb-1 transition-all grid-cols-8 gap-8">
-                <div class="absolute -inset-x-6 -inset-y-4 z-0  rounded-md transition motion-reduce:transition-none block group-hover:bg-gray-400 dark:group-hover:bg-[#12161e] group-hover:shadow-xl">
+        <li class="mb-20 lg:mb-12">
+            <div class="w-auto h-auto group lg:relative lg:grid pb-1 transition-all lg:grid-cols-8 lg:gap-8">
+                <div class=" lg:absolute lg:-inset-x-6 lg:-inset-y-4 z-0  rounded-md transition motion-reduce:transition-none block lg:group-hover:bg-gray-400 dark:group-hover:bg-[#12161e] group-hover:shadow-xl">
                 </div>
-                <span class="text-sm z-10 mb-2 mt-1 font-bold uppercase tracking-wide col-span-3">
-                    {fecha}
-                    <a  class="col-span-3 h-full z-10 my-2" href={urlPrincipal}>
-                        <img class="h-auto w-auto mt-5 opacity-80 "  src={logo} alt="tienda-online-react-tailwind-js">
+                <span class="flex flex-col text-sm md:text-lg lg:z-10 mb-5 mt-1 font-bold uppercase lg:tracking-wide lg:col-span-3">
+                    {fecha}<br>
+                    <a  class=" mt-2 lg:col-span-3 lg:h-full lg:z-10 lg:my-2" href={urlPrincipal}>
+                        <img class="w-4/5 h-3/5 md:w-3/5 md:h-2/5   m-auto lg:h-auto lg:w-auto lg:mt-5 opacity-80 "  src={logo} alt={titulo}>
                     </a>
                 </span>
-                    <div class="z-10 sm:col-span-5">
-                        <div>
-                            <a class="text-xl group/link inline-flex items-baseline font-medium leading-tight dark:text-white dark:hover:text-[#3b9545] hover:text-[#3b9545]" href={urlPrincipal}>{titulo}
+                    <div class="z-10 lg:col-span-5">
+                        <div class="mt-5">
+                            <a class="text-xl md:text-2xl group/link lg:inline-flex lg:items-baseline font-medium leading-tight dark:text-white dark:hover:text-[#3b9545] hover:text-[#3b9545]" href={urlPrincipal}>{titulo}
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd">
                                     </path>
@@ -43,11 +43,11 @@ const arrayEtiquetas = etiquetas.split(",");
                             </a>
                         </div>
                     
-                    <p class="mt-2  leading-normal">{descripcion}
+                    <p class="mt-2 text-base md:text-xl leading-normal">{descripcion}
                     </p>
 
-                    <ul class="mt-2 flex flex-wrap">
-                        <li class="mr-4">
+                    <ul class="mt-2 flex justify-center md:w-[370px] lg:w-auto lg:mx-0 lg:justify-start md:mx-auto flex-wrap">
+                        <li class="lg:mr-4 ">
                             <a class="relative mt-2 inline-flex items-center  font-medium dark:text-white dark:hover:text-[#3b9545] hover:text-[#3b9545]" href={urlOpcional1}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-1 h-3 w-3" aria-hidden="true">
                                     <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z">
@@ -55,7 +55,7 @@ const arrayEtiquetas = etiquetas.split(",");
                                     <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z">
                                     </path>
                                 </svg>
-                                <span class="text-base" >{nombreOpcional1}
+                                <span class="text-base md:text-xl" >{nombreOpcional1}
                                 </span>
                             </a>
                         </li>
@@ -67,13 +67,13 @@ const arrayEtiquetas = etiquetas.split(",");
                                     <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z">
                                     </path>
                                 </svg>
-                                <span class="text-base">{nombreOpcional2}
+                                <span class="text-base md:text-xl">{nombreOpcional2}
                                 </span>
                             </a>
                         </li>
                     </ul>
 
-                    <ul class="mt-2 flex flex-wrap text-white">
+                    <ul class="mt-2 flex justify-center lg:justify-start flex-wrap text-white">
                         {
                             arrayEtiquetas.map((etiqueta) => <LIproyectosEtiquetas etiqueta={etiqueta}/> )
                         }
