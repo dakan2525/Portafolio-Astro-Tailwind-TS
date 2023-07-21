@@ -53,7 +53,7 @@ const habilidades = [
             </a>
             <div class="pb-10 p-4 md:p-0 md:w-auto mx-auto lg:col-span-5 lg:ml-8"
             >
-                <h1 class="font-bold md:pb-3 lg:pb-10 md:text-2xl lg:text-3xl" style={"view-transition-name: titulo"}>Soy Andres Prado,<p class="text-xl font-semibold">Programador Junior Especializado en <strong>Front end</strong></p></h1>
+                <h1 class="font-bold md:pb-3 lg:pb-10 md:text-2xl lg:text-3xl" style={"view-transition-name: titulo"}>Soy Andres Prado<p class=" mb-4 lg:text-xl font-semibold">Programador Junior Especializado en Front end</p></h1>
 
                 
                 <p class="lg:text-start">Soy un apasionado desarrollador front-end con una sólida base de conocimientos que me ayudan a asumir retos y ponerme nuevas metas. He trabajado en diversos proyectos personales y de código abierto, donde he aplicado con éxito las siguientes tecnologías: <strong> HTML5, CSS, React, Style Components, JavaScript, TypeScript, Tailwind, Astro</strong> y Programación Orientada a Objetos <strong>(POO).</strong> Estas experiencias me han permitido adquirir un amplio conocimiento y habilidades prácticas en el desarrollo de interfaces de usuario modernas y funcionales. Estoy siempre emocionado por aprender nuevas tecnologías y enfrentar nuevos desafíos en el campo del desarrollo front-end. Estoy dispuesto a aplicar mi experiencia y conocimientos para contribuir al éxito de tu equipo y enfrentar proyectos emocionantes.
@@ -63,7 +63,7 @@ const habilidades = [
 
         <div class=" mb-32 p-5 grid grid-cols-5 gap-4  lg:flex lg:justify-end lg:mb-64 lg:px-28">
             {
-                habilidades.map((elemento) => <img class=" mx-auto w-10 md:w-14 lg:mx-11" style={`view-transition-name: ${elemento.titulo}`} src={elemento.urlImagen} alt={elemento.titulo} >)
+                habilidades.map((elemento) => <img class=" mx-auto w-10 h-10 md:w-14 md:h-14 lg:mx-11 " style={`view-transition-name: ${elemento.titulo}`} src={elemento.urlImagen} alt={elemento.titulo} >)
             }
         </div>
     </section>

@@ -8,7 +8,7 @@ const bgHeder = "bg-gradient-to-b from-gray-400 from-0% via-gray-300 via-50% to-
 
     <div class="ml-5 w-[68px] md:w-[74px] lg:w-[78px] mb-1 md:mb-4 col-span-4  md:h-16  rounded-xl p-1 transition-all lg:col-span-1">
         <a class="text-white w-[45px] md:w-[68px] lg:w-[76px] " href="https://pagespeed.web.dev/analysis/https-portafolio-astro-tailwind-ts-vercel-app/4uc80f1iza?form_factor=desktop"> 
-            <img class="dark:invert w-[45px] md:w-[68px] lg:w-[76px] " src="./imagenes/speed_test.svg" alt="test de velocidad pagina web">
+            <img class="dark:invert w-[45px] h-[45px] md:w-[68px] md:h-[68px] lg:w-[76px] lg:h-[76px] " src="./imagenes/speed_test.svg" alt="test de velocidad pagina web">
         </a>
     </div>
 
@@ -16,30 +16,30 @@ const bgHeder = "bg-gradient-to-b from-gray-400 from-0% via-gray-300 via-50% to-
     <div class="order-3 md:pt-10 mb-5 col-span-5 lg:col-span-3 lg:order-1 inline-flex justify-center ">
             
             <button class={btnHeder} type="button" onclick=`{window.location.pathname !== '/' ? location.href = '/' : ''}`>
-                <img class="w-7 md:w-9 m-auto " src="./imagenes/books-removebg-preview.webp" alt="logo inicio">
+                <img class="w-7 h-7 md:w-9 md:h-9 m-auto " src="./imagenes/books-removebg-preview.webp" alt="logo inicio">
                 <span class="hidden md:block md:m-auto px-2">Inicio</span>
             </button>
             
             <button class={btnHeder} type="button"  onclick=`{window.location.pathname !== '/habilidades' ? location.href = '/habilidades' :    '' }`>
-                <img class="w-7 md:w-9 m-auto " src="./imagenes/skills.webp" alt="logo habilidades">
+                <img class="w-7 h-7 md:w-9 md:h-9 m-auto " src="./imagenes/skills.webp" alt="logo habilidades">
                 <span class="hidden md:block md:m-auto px-2">Habilidades</span>
             </button>
 
             <button class={btnHeder} type="button"  onclick=`{window.location.pathname !== '/proyectos' ? location.href = '/proyectos' : '' }`>
-                <img class="w-7 md:w-9 m-auto " src="./imagenes/proyectos.svg" alt="logo proyectos">
+                <img class="w-7 h-7 md:w-9 md:h-9 m-auto " src="./imagenes/proyectos.svg" alt="logo proyectos">
                 <span class="hidden md:block md:m-auto px-2">Proyectos</span>
             </button>
             
             <button class={btnHeder} type="button"  onclick=`{window.location.pathname !== '/chistes' ? location.href = '/chistes' : '' }`>
-                <img class="w-6 md:w-8 m-auto  " src="./imagenes/risa.svg" alt="logo chistes">
+                <img class="w-6 h-6 md:w-8 md:h-8 m-auto  " src="./imagenes/risa.svg" alt="logo chistes">
                 <span class="hidden md:block md:m-auto px-2">Chistes</span>
             </button>
     </div>
 
     <div class="order-1  text-end mr-5">
         <button  class="" onclick="{document.documentElement.classList.toggle('dark')}">
-            <samp class="dark:hidden"><img class="w-[45px] md:md:w-16" src="./imagenes/sol.svg" alt="luna"></samp>
-            <samp class="hidden dark:block"><img class="w-[37px] md:w-[57px]" src="./imagenes/luna.svg" alt="luna"></samp>
+            <samp class="dark:hidden"><img class="w-[45px] h-[45px] md:md:w-16 md:md:h-16" src="./imagenes/sol.svg" alt="icono de Sol"></samp>
+            <samp class="hidden dark:block"><img class="w-[37px] h-[37px] md:w-[57px] md:h-[57px]" src="./imagenes/luna.svg" alt="icono de luna"></samp>
         </button>
     </div>
         
