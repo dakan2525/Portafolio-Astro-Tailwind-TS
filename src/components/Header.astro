@@ -1,16 +1,15 @@
 ---
-const btnHeder = "w-[45px] md:w-auto rounded-2xl shadow-sm shadow-gray-600 shadow-gray-600 dark:shadow-gray-300 flex justify-between py-1 px-2 mx-3 hover:shadow-inner hover:shadow-gray-600 transition-all"
+const btnHeder = "w-[45px] md:w-auto lg:py-0 rounded-2xl shadow-sm shadow-gray-600 shadow-gray-600 dark:shadow-gray-300 flex justify-between py-1 px-2 mx-3 hover:shadow-inner hover:shadow-gray-600 transition-all"
 
 const bgHeder = "bg-gradient-to-b from-gray-400 from-0% via-gray-300 via-50% to-gray-200 to-100%  dark:from-black dark:via-slate-900  dark:to-[#19202b]"
 ---
-<header class={`${bgHeder} md:px-4 md:py-8 w-full mx-auto grid grid-cols-5   lg:px-40  font-bold text-center items-center py-5`}>
+<header class={`${bgHeder} md:px-4 md:py-8 w-full mx-auto grid grid-cols-5  lg:p-0 lg:px-20  font-bold text-center items-center py-5`}>
     
 
-    <div class="ml-5  col-span-4 w-[40px] md:w-16 md:h-16  rounded-xl p-1 transition-all lg:col-span-1">
-        <button class="dark:text-white" type="button" class={btnHeder} onclick=`{window.location.pathname !== '/' ? location.href = '/' : ''}`>
-            <svg class="h-[42px] md:h-16 md:m-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M6.818 22v-2.857C6.662 17.592 5.633 16.416 4.682 15m9.772 7v-1.714c4.91 0 4.364-5.714 4.364-5.714s2.182 0 2.182-2.286l-2.182-3.428c0-4.572-3.709-6.816-7.636-6.857c-2.2-.023-3.957.53-5.27 1.499"/><path d="m13 7l2 2.5l-2 2.5M5 7L3 9.5L5 12m5-6l-2 7"/></g></svg>
-            
-        </button>
+    <div class="ml-5 w-[68px] md:w-[74px] lg:w-[78px] mb-1 md:mb-4 col-span-4  md:h-16  rounded-xl p-1 transition-all lg:col-span-1">
+        <a class="text-white w-[45px] md:w-[68px] lg:w-[76px] " href="https://pagespeed.web.dev/analysis/https-portafolio-astro-tailwind-ts-vercel-app/4uc80f1iza?form_factor=desktop"> 
+            <img class="dark:invert w-[45px] md:w-[68px] lg:w-[76px] " src="./imagenes/speed_test.svg" alt="test de velocidad pagina web">
+        </a>
     </div>
 
 
