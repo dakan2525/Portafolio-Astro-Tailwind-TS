@@ -56,24 +56,27 @@ const usersChistes = await users.map((usuario, i) => ({
     chiste: arrayChistes[i].urlChiste
 }));
 
-const bgCardChiste = "bg-gradient-to-t from-transparent from-slate-60% via-gray-300 via-80% to-[#afacba] to-100% border-gray-500 border-b-[3px] border-r-[3px] shadow-slate-800 dark:from-[#19202b]  dark:via-gray-700 dark:to-gray-700"
+const bgCardChiste = "bg-gradient-to-t from-transparent from-slate-60% via-gray-300 via-80% to-[#afacba] to-100% border-gray-500 md:border-b-[3px] md:border-r-[3px] shadow-slate-800 dark:from-[#19202b]  dark:via-gray-700 dark:to-gray-700"
 ---
 
-<Layout style="bg-gray-200">
-    <section class="mx-4">
-        <div class={`${bgCardChiste}  md:pb-4  shadow-md lg:mx-3 lg:shadow-lg  lg:my-10 rounded-3xl  mb-20 lg:pb-20 `}>
-            <h1 class="font-bold w-full text-center h-20 text-xl lg:text-3xl p-4 " style={"view-transition-name: proyectoChiste"}>Dejame contarte un chiste, <br>o mejor 10</h1>
-            <p class="p-4 text-start w-auto lg:h-44 lg:pl-20 font-semibold">Primero que todo muchas gracias por ver mi trabajo,para poder contarte estos chistes fue necesario tener las siguentes habilidades que voy a resumir a continuación<br>
-                <br>- Conocimientos en POO y manejo de componentes
-                <br>- Uso del método fetch() para consumir una API "https://jsonplaceholder.typicode.com/users"
-                <br>- Conocimientos en JavaScript, TypeScript, Tailwind, Node.js y Astro
-                <br>- Creación de arrays uniendo dos arreglos, haciendo uso del método map()
-                <br>- Manejo de props y buenas prácticas, para evitar la duplicidad de código 
-        </p>
+<Layout style="">
+    <section class="w-auto h-auto">
+        <div class={` w-[98%] h-auto m-auto md:px-10 text-center mb-10 p-1 shadow-md lg:shadow-lg rounded-3xl`}>
+            <h1 class="font-bold text-xl lg:text-3xl mb-3" style={"view-transition-name: proyectoChiste"}>Dejame contarte un chiste, <br>o mejor 10</h1>
+            <p class="  mb-6 font-semibold">Primero que todo muchas gracias por ver mi trabajo,para poder contarte estos chistes fue necesario tener las siguentes habilidades que voy a resumir a continuación
+            </p>
+
+            <div class="md:text-start lg:text-center my-2">
+                <p>- Conocimientos en POO y manejo de componentes</p>
+                <p>- Uso del método fetch() para consumir una API "https://jsonplaceholder.typicode.com/users"</p>
+                <p>- Conocimientos en JavaScript, TypeScript, Tailwind, Node.js y Astro</p>
+                <p>- Creación de arrays uniendo dos arreglos, haciendo uso del método map()</p>
+                <p>- Manejo de props y buenas prácticas, para evitar la duplicidad de código </p>
+            </div>
     
         </div>
 
-        <div class="md:mx-3 grid md:grid-cols-2 lg:grid-cols-4 mb-20  items-center gap-8 text-center lg:py-16 rounded-3xl @apply lg:bg-[url('./imagenes/map-colombia.webp')] bg-[center_center] bg-no-repeat w-auto bg-contain">
+        <div class="mb-10 grid md:grid-cols-2 lg:grid-cols-4 gap-8 rounded-3xl @apply lg:bg-[url('./imagenes/map-colombia.webp')] bg-[center_center] bg-no-repeat bg-contain">
 
         {
             usersChistes.map((usuario) => (
