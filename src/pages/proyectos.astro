@@ -2,12 +2,14 @@
 import Layout from "../components/Layout.astro";
 import CardExperiencia from "../components/CardExperiencia.astro";
 import CardProyectos from "../components/CardProyectos.astro";
+
+
+
 ---
 
 
 <Layout style="">
     <section class="w-auto h-auto text-xl text-center lg:text-start mx-5 md:mx-10 lg:grid lg:grid-cols-8 lg:mx-28 lg:pt-20 pb-20">          
-
         <div class="lg:col-span-3 lg:sticky top-0 lg:flex lg:max-h-screen flex-col"  style={"view-transition-name: titulo"}> 
             
             <div class="lg:col-span-2 lg:sticky top-0 flex max-h-screen flex-col justify-between py-10">
@@ -18,8 +20,9 @@ import CardProyectos from "../components/CardProyectos.astro";
                 </p>
     
                 <ul class="w-full transition-all mt-10 text-xl font-semibold">
+
                     <li class="flex justify-start ml-2 my-2">
-                        <a class="group flex mx-3 justify-start" href="#estudios">
+                        <a id="btnEstudios" class="group flex mx-3 justify-start" href="#estudios">
                             <span class=" w-[10px] rounded-full mr-2 h-1 my-auto bg-gray-400  group-hover:w-[40px]  duration-300 ">
                             </span>
                             <span class="col-span-1 h-7 self-start my-auto  ">
@@ -27,8 +30,8 @@ import CardProyectos from "../components/CardProyectos.astro";
                             </span>
                         </a>
                     </li>
-                    <li class="flex justify-start ml-2  ">
-                        <a class="group flex mx-3 justify-start" href="#laboral">
+                    <li class="flex justify-start ml-2">
+                        <a id="btnLaboral" class="group flex mx-3 justify-start" href="#laboral">
                             <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400   group-hover:w-[40px]  duration-300 ">
                             </span>
                             <span class=" col-span-1 h-7 self-start my-auto ">
@@ -37,7 +40,7 @@ import CardProyectos from "../components/CardProyectos.astro";
                         </a>
                     </li>
                     <li class="flex justify-start ml-2 my-2">
-                        <a class="group flex mx-3 justify-start" href="#proyectos">
+                        <a id="btnProyectos" class="group flex mx-3 justify-start" href="#proyectos">
                             <span class=" w-[10px] rounded-xl mr-2 h-1 my-auto bg-gray-400   group-hover:w-[40px]  duration-300 ">
                             </span>
                             <span class=" col-span-1 h-7 self-start my-auto ">
