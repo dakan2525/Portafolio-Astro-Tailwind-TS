@@ -6,6 +6,8 @@ interface Props {
     titulo: string
     urlPrincipal: string
     logo: string
+    dimenciones:string
+    puesto:string
     descripcion: string
     nombreOpcional1?: string
     urlOpcional1?: string 
@@ -16,7 +18,7 @@ interface Props {
     etiquetas: string
 }
 
-const {fecha, titulo, urlPrincipal, logo, descripcion, nombreOpcional1, urlOpcional1, nombreOpcional2, urlOpcional2, nombreOpcional3, urlOpcional3, etiquetas} =Astro.props
+const {fecha, titulo, urlPrincipal, logo,dimenciones, puesto, descripcion, nombreOpcional1, urlOpcional1, nombreOpcional2, urlOpcional2, nombreOpcional3, urlOpcional3, etiquetas} =Astro.props
 
 const arrayEtiquetas = etiquetas.split(",");
 
@@ -27,10 +29,10 @@ const arrayEtiquetas = etiquetas.split(",");
             <div class="w-auto h-auto group lg:relative grid grid-cols-1 pb-1 transition-all lg:grid-cols-8 lg:gap-8">
                 <div class=" lg:absolute lg:-inset-x-6 lg:-inset-y-4 z-0  rounded-md transition motion-reduce:transition-none block lg:group-hover:bg-gray-400 dark:group-hover:bg-[#12161e] group-hover:shadow-xl">
                 </div>
-                <span class="flex flex-col text-sm md:text-lg lg:z-10 mb-5 mt-1 font-bold uppercase lg:tracking-wide lg:col-span-3">
+                <span class="flex flex-col text-sm md:text-lg lg:z-10 mb-5 mt-1 font-bold uppercase lg:tracking-wide lg:col-span-3 lg:text-center">
                     {fecha}<br>
-                    <a  class=" w-[280px] h-[91px] md:w-[444px] md:h-[144px]  lg:w-[314px] lg:h-[102px] m-auto lg:col-span-3 lg:z-10" href={urlPrincipal}>
-                        <img class="w-[280px] h-[91px] md:w-[444px] md:h-[144px]  lg:w-[314px] lg:h-[102px] opacity-80 "  src={logo} alt={titulo}>
+                    <a  class={`${dimenciones} m-auto lg:col-span-3 lg:z-10`} href={urlPrincipal}>
+                        <img class={`${dimenciones} opacity-80`}  src={logo} alt={titulo}>
                     </a>
                 </span>
                     <div class="z-10 lg:col-span-5">
@@ -42,7 +44,7 @@ const arrayEtiquetas = etiquetas.split(",");
                                 </svg>
                             </a>
                         </div>
-                    
+                    <p class="my-4 font-bold text-xl">{puesto}</p>
                     <p class="mt-2 text-base md:text-xl leading-normal">{descripcion}
                     </p>
 
